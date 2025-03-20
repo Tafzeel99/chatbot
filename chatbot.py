@@ -132,7 +132,7 @@ with st.sidebar:
     st.caption("© 2025 AI Chatbot by @tafzeel")
 
 # Main content
-st.markdown("<div class='main-header'><h1 style='color: black;'>🤖 Smart AI ChatBot</h1><p style='color: black;'>Your intelligent companion for any question or task. What can I help you with today?</p></div>", unsafe_allow_html=True)
+st.markdown("<div class='main-header'><h1 style='color: black;'>🤖 Smart AI ChatBot</h1><p style='color: black;'>Your intelligent companion for any question or task. What can I help you today?</p></div>", unsafe_allow_html=True)
 
 # Initialize session states
 if "messages" not in st.session_state:
@@ -209,8 +209,18 @@ if user_input:
             
             # Improved thinking animation
             thinking_messages = [
-                "Thinking...",  
-                "Almost there..."
+                "Thinking.",
+                "Thinking..",
+                "Thinking...",
+                "Almost there.",
+                "Almost there..",
+                "Almost there...",
+                "Almost there.",
+                "Almost there..",
+                "Almost there...",
+                "Almost there.",
+                "Almost there..",
+                "Almost there...",
 
             ]
             
