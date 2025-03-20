@@ -221,12 +221,10 @@ if user_input:
                 "Almost there.",
                 "Almost there..",
                 "Almost there...",
-
             ]
             
-            for i in range(3):  # Display 3 random thinking messages
-                message = random.choice(thinking_messages)
-                response_area.markdown(f"*{message}*")
+            for i in thinking_messages:  # Display 3 random thinking messages
+                response_area.markdown(f"*{i}*")
                 time.sleep(0.5)  # Shorter pause for better UX
 
             # Generate content with selected parameters
