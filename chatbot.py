@@ -212,6 +212,12 @@ if user_input:
                 "Thinking.",
                 "Thinking..",
                 "Thinking...",
+                "Thinking.",
+                "Thinking..",
+                "Thinking...",
+                "Thinking.",
+                "Thinking..",
+                "Thinking...",
                 "Almost there.",
                 "Almost there..",
                 "Almost there...",
@@ -221,11 +227,15 @@ if user_input:
                 "Almost there.",
                 "Almost there..",
                 "Almost there...",
+                "Almost there.",
+                "Almost there..",
+                "Almost there...",
+
             ]
             
             for i in thinking_messages:  # Display 3 random thinking messages
                 response_area.markdown(f"*{i}*")
-                time.sleep(0.5)  # Shorter pause for better UX
+                time.sleep(0.4)  # Shorter pause for better UX
 
             # Generate content with selected parameters
             response = model.generate_content(
