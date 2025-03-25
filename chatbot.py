@@ -209,21 +209,21 @@ if user_input:
             
             # Improved thinking animation
             thinking_messages = [
-                "Responding.",
-                "Responding..",
-                "Responding...",
-                "Responding.",
-                "Responding..",
-                "Responding...",
-                "Responding.",
-                "Responding..",
-                "Responding...",
-                "Responding.",
-                "Responding..",
-                "Responding...",
-                "Responding.",
-                "Responding..",
-                "Responding...",
+                ".",
+                "..",
+                "...",
+                ".",
+                "..",
+                "...",
+                ".",
+                "..",
+                "...",
+                ".",
+                "..",
+                "...",
+                ".",
+                "..",
+                "...",
             ]
             
             for message in thinking_messages:
@@ -234,10 +234,10 @@ if user_input:
             response = model.generate_content(
                 user_input,
                 generation_config=genai.types.GenerationConfig(
-                    temperature=0.7,
-                    top_k=40,
-                    top_p=0.8,
-                    max_output_tokens=2048,
+                    temperature=0.5,  # Lower temperature for faster, more focused responses
+                    top_k=20,  # Reduced for faster token selection
+                    top_p=0.7,  # Slightly reduced for speed
+                    max_output_tokens=1024,  # Reduced max tokens for faster responses
                 )
             )
             
