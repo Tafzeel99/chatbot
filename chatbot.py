@@ -209,38 +209,35 @@ if user_input:
             
             # Improved thinking animation
             thinking_messages = [
-                "Thinking.",
-                "Thinking..",
-                "Thinking...",
-                "Thinking.",
-                "Thinking..",
-                "Thinking...",
-                "Thinking.",
-                "Thinking..",
-                "Thinking...",
-                "Almost there.",
-                "Almost there..",
-                "Almost there...",
-                "Almost there.",
-                "Almost there..",
-                "Almost there...",
-                "Almost there.",
-                "Almost there..",
-                "Almost there...",
-                "Almost there.",
-                "Almost there..",
-                "Almost there...",
-
+                "Responding.",
+                "Responding..",
+                "Responding...",
+                "Responding.",
+                "Responding..",
+                "Responding...",
+                "Responding.",
+                "Responding..",
+                "Responding...",
+                "Responding.",
+                "Responding..",
+                "Responding...",
+                "Responding.",
+                "Responding..",
+                "Responding...",
             ]
             
-            for i in thinking_messages:  # Display 3 random thinking messages
-                response_area.markdown(f"*{i}*")
-                time.sleep(0.4)  # Shorter pause for better UX
+            for message in thinking_messages:
+                response_area.markdown(f"*{message}*")
+                time.sleep(0.5)  # Reduced pause time
 
-            # Generate content with selected parameters
+            # Generate content with optimized parameters
             response = model.generate_content(
                 user_input,
                 generation_config=genai.types.GenerationConfig(
+                    temperature=0.7,
+                    top_k=40,
+                    top_p=0.8,
+                    max_output_tokens=2048,
                 )
             )
             
